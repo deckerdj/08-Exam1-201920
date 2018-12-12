@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Daniel Decker.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 def test_factor_sum():
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  Done: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -44,7 +44,35 @@ def test_factor_sum():
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
+    # Test 1:
+    expected = 11
+    answer = factor_sum(28)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
+    # Test 2:
+    expected = 4
+    answer = factor_sum(25)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 7
+    answer = factor_sum(4)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 4
+    answer = factor_sum(9)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 5:
+    expected = 4
+    answer = factor_sum(16)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
 
 def factor_sum(n):
     """
@@ -70,6 +98,11 @@ def factor_sum(n):
 
        *** ASK FOR AN EXPLANATION IF YOU DO NOT UNDERSTAND THE ABOVE. ***
     """
+    total = 0
+    for k in range(n):
+        if n % (k + 1) == 0:
+            total = total + (k + 1)
+    return total
     ###########################################################################
     #  This function is PURPOSELY implemented INCORRECTLY (it just returns 0).
     #  DO NOT IMPLEMENT  factor_sum.  Just leave it as it is (returning 0).
@@ -78,3 +111,4 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+
